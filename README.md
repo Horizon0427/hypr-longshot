@@ -88,3 +88,5 @@ When triggering the screenshot tool via a custom Waybar module right after a sys
 
 * **Symptoms:** The red recording overlay window might spawn out of place , or the left-click action to stop the recording might become unresponsive.
 * **Workaround:** Simply reload/refresh Waybar or try triggering the script one more time. The tool typically stabilizes and works after this initial hiccup.
+
+https://github.com/user-attachments/assets/76bef915-ea18-46d6-a734-45ba7eff75c2
