@@ -72,7 +72,7 @@ to activate `waybar`, check my configuration in the repository `Arch-config`.
 1. run `longshot.sh`
 2. select the area you want to capture
 3. Slowly scroll down the page you want to capture.
-4. Click the button in `watbar` or press any key in the running terminal to stop
+4. Click the button in `waybar` or press any key in the running terminal to stop
 5. wait a seconds for the stitching work.
 
 **How it works**
