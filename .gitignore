@@ -16,4 +16,4 @@ env/
 *.jpg
 temp/
 
-longshot_overlay
+*longshot_overlay
