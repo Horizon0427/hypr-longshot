@@ -49,11 +49,7 @@ safe_kill() {
 }
 
 cleanup_overlay() {
-  if [ -n "${OVERLAY_PID:-}" ] && kill -0 "$OVERLAY_PID" 2>/dev/null; then
-    kill -9 "$OVERLAY_PID" 2>/dev/null
-  else
-    pkill -9 -f "$OVERLAY_BIN" 2>/dev/null
-  fi
+  pkill -9 -f "$OVERLAY_BIN" 2>/dev/null || true
 }
 
 cleanup_temp() {
@@ -131,7 +127,6 @@ hyprctl dispatch exec \
   "[move $oX $oY; size $oW $oH] env XDG_SESSION_TYPE=wayland WAYLAND_DISPLAY=${WAYLAND_DISPLAY} ${OVERLAY_BIN} $oW $oH" \
   >/dev/null 2>&1
 sleep 0.3
-OVERLAY_PID=$(pgrep -x "$(basename "$OVERLAY_BIN")" | tail -1 || true)
 
 pkill -RTMIN+8 waybar 2>/dev/null
 notify-send -t 3000 "🔴 Longshot starts." \
